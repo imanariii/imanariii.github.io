@@ -13,7 +13,8 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  left: auto;
+}
+.header__body * {
   z-index: 5;
 }
 
@@ -54,6 +55,7 @@ header {
 }
 .particle {
   position: absolute;
+  z-index: 1;
 }
 .reaction-btn {
   cursor: pointer;

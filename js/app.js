@@ -1,4 +1,4 @@
-const header = document.querySelector('header');
+const header = document.querySelector('.header__body');
 header.style.header = window.innerHeight + 'px';
 header.style.width = window.innerWidth + 'px';
 
@@ -13,38 +13,38 @@ reactionButton.addEventListener('click', ()=>{
 function addReaction(number) {
     const item = document.createElement('img');
     item.className = 'particle';
-    item.style.width = '50px';
-    item.style.height = '50px';
+    item.style.width = '120px';
+    item.style.height = '120px';
     switch (number) {
         case 1:
             item.src = 'assets/emoji1.png';
             particles.push({
-                x: 10,
-                y: 10,
+                x: parseInt(Math.random() * (50 - 1) + 1),
+                y: parseInt(Math.random() * (50 - 1) + 1),
                 item
             });
             break;
         case 2:
             item.src = 'assets/emoji2.png';
             particles.push({
-                x: 10,
-                y: 10,
+                x: parseInt(Math.random() * (50 - 1) + 1),
+                y: parseInt(Math.random() * (50 - 1) + 1),
                 item
             });
             break;
         case 3:
             item.src = 'assets/emoji3.png';
             particles.push({
-                x: 10,
-                y: 10,
+                x: parseInt(Math.random() * (50 - 1) + 1),
+                y: parseInt(Math.random() * (50 - 1) + 1),
                 item
             });
             break;
         case 4:
             item.src = 'assets/emoji4.png';
             particles.push({
-                x: 10,
-                y: 10,
+                x: parseInt(Math.random() * (50 - 1) + 1),
+                y: parseInt(Math.random() * (50 - 1) + 1),
                 item
             });
             break;
@@ -54,8 +54,8 @@ function addReaction(number) {
     header.appendChild(particles[particles.length - 1].item);
 }
 
-let xSpeed = 3;
-let ySpeed = 3;
+let xSpeed = 5;
+let ySpeed = 5;
 
 function update() {
     particles.map(item=>{
